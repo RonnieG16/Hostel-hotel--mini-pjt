@@ -26,7 +26,7 @@ class HostelVisitSystem:
 
         visit = Visit(friend, room, reason)
         self.visits.append(visit)
-        print("✅ Visit recorded!\n")
+        print("Visit recorded!\n")
 
     def view_visits(self):
         if not self.visits:
@@ -47,10 +47,10 @@ class HostelVisitSystem:
             if 1 <= choice <= len(self.visits):
                 visit = self.visits[choice - 1]
                 if visit.time_out:
-                    print("⚠ Already checked out!")
+                    print("Already checked out!")
                 else:
                     visit.check_out()
-                    print("✅ Checked out successfully!\n")
+                    print("Checked out successfully!\n")
             else:
                 print("Invalid visit number.\n")
         except ValueError:
